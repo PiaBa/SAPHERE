@@ -1,0 +1,104 @@
+--- Preparations ---
+Creating params for the data owner...
+Creating params for the processor...
+
+Creating keys and encoder for the data owner...
+Creating keys and encoder for the processor...
+
+Creating the initial vector...
+The initial vector is:
+[9.000000000000000, 9.000000000000000, 9.000000000000000, 9.000000000000000, 9.000000000000000, ...]
+
+Data owner encodes and encrypts the vector...
+In theory: Data owner sends the resulting ciphertext to the processor, which performs operations on the data...
+
+
+--- Standard version ---
+Step 1: In theory: Transmission of the encrypted computation result to the data owner...
+--> Size of the data: 524288 Bytes
+Step 2: Data owner decrypts and decodes the vector...
+Step 3: In theory: Transmission of the plaintext result back to the processor...
+--> Size of the data: 32768 Bytes
+
+Exemplary resulting vector of the standard version:
+[8.999999999998133, 9.000000001485823, 9.000000000236881, 8.999999999461236, 8.999999999844890, ...]
+
+
+Minimum execution time of step 2:                                                                                        55.890000 ms
+Maximum execution time of step 2:                                                                                        68.617600 ms
+Median of the execution times of step 2:                                                                                 56.738000 ms
+Mean of the execution times of step 2:                                                                                   57.205714 ms
+Standard deviation of the execution times of step 2:                                                                      1.287244 ms
+
+Minimum error introduced to the vector:                                                                               0.000000000000925
+Maximum error introduced to the vector:                                                                               0.000000007767932
+Median of the errors introduced to the vector:                                                                        0.000000000638436
+Mean of the errors introduced to the vector:                                                                          0.000000000903723
+Standard deviation of the errors introduced to the vector:                                                            0.000000000901806
+
+
+--- SAPHERE ---
+Step 1: Processor adds additional encryption to c
+Step 2: In theory: Transmission of c'' to the data owner...
+--> Size of the data: 524288 Bytes
+Step 3: Data owner decrypts c'' to obtain the midtext...
+Step 4: In theory: Transmission of midtext to processor...
+--> Size of the data: 262144 Bytes
+Step 5: Processor creates c''' by concatenating the midtext and c'_1. It then decrypts c'''...
+
+Exemplary resulting vector of the commutative key-switch:
+[8.999999999687423, 9.000000002310280, 9.000000000287896, 9.000000001632982, 9.000000000676190, ...]
+
+
+Minimum execution time of step 1:                                                                                       151.931900 ms
+Maximum execution time of step 1:                                                                                       215.857600 ms
+Median of the execution times of step 1:                                                                                152.953900 ms
+Mean of the execution times of step 1:                                                                                  154.133840 ms
+Standard deviation of the execution times of step 1:                                                                      4.008158 ms
+
+Minimum execution time of step 3:                                                                                        13.676500 ms
+Maximum execution time of step 3:                                                                                        23.731500 ms
+Median of the execution times of step 3:                                                                                 13.752200 ms
+Mean of the execution times of step 3:                                                                                   13.877914 ms
+Standard deviation of the execution times of step 3:                                                                      0.499158 ms
+
+Minimum execution time of step 5:                                                                                        57.508000 ms
+Maximum execution time of step 5:                                                                                        84.401700 ms
+Median of the execution times of step 5:                                                                                 58.092050 ms
+Mean of the execution times of step 5:                                                                                   58.480518 ms
+Standard deviation of the execution times of step 5:                                                                      1.703179 ms
+
+Minimum execution time at the processor (step 1 and 5):                                                                 209.717700 ms
+Maximum execution time at the processor (step 1 and 5):                                                                 296.440100 ms
+Median of the execution times at the processor (step 1 and 5):                                                          211.236850 ms
+Mean of the execution times at the processor (step 1 and 5):                                                            212.614357 ms
+Standard deviation of the execution times at the processor (step 1 and 5):                                                5.194265 ms
+
+Minimum execution time at the data owner (step 3):                                                                       13.676500 ms
+Maximum execution time at the data owner (step 3):                                                                       23.731500 ms
+Median of the execution times at the data owner (step 3):                                                                13.752200 ms
+Mean of the execution times at the data owner (step 3):                                                                  13.877914 ms
+Standard deviation of the execution times at the data owner (step 3):                                                     0.499158 ms
+
+Minimum total execution time:                                                                                           223.429900 ms
+Maximum total execution time:                                                                                           320.171600 ms
+Median of the total execution times:                                                                                    225.007850 ms
+Mean of the total execution times:                                                                                      226.492271 ms
+Standard deviation of the total execution times:                                                                          5.557004 ms
+
+Minimum error introduced to the vector:                                                                               0.000000000000000
+Maximum error introduced to the vector:                                                                               0.000000015937745
+Median of the errors introduced to the vector:                                                                        0.000000001021259
+Mean of the errors introduced to the vector:                                                                          0.000000001337931
+Standard deviation of the errors introduced to the vector:                                                            0.000000001177133
+
+
+--- Relative evaluation ---
+Relative change in the execution time at the data owner: (considering the median)                                          24.2381 %
+Relative change in the execution time at the data owner: (considering the mean)                                            24.2597 %
+
+Relative change in the total execution time: (considering the median)                                                     396.5735 %
+Relative change in the total execution time: (considering the mean)                                                       395.9260 %
+
+Relative change in the introduced error: (considering the median)                                                         159.9626 %
+Relative change in the introduced error: (considering the mean)                                                           148.0466 %
