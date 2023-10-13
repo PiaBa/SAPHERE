@@ -1,9 +1,10 @@
 # SAPHERE
 
-This repository contains the code for the experimental analysis within the paper "Secure Plaintext Acquisition of Homomorphically Encrypted Results for Remote Processing" (SAPHERE) by Pia Baumstark, David Monschein, and Oliver Waldhorst. It is part of the 48th [IEEE Conference on Local Computer Networks](https://www.ieeelcn.org/) (LCN).
+This repository contains the code for the experimental analysis within the paper "Secure Plaintext Acquisition of Homomorphically Encrypted Results for Remote Processing" (SAPHERE) by Pia Baumstark, David Monschein, and Oliver Waldhorst. It was part of the 48th [IEEE Conference on Local Computer Networks](https://www.ieeelcn.org/) (LCN) and can be found on [IEEE Xplore](https://ieeexplore.ieee.org/document/10223372).
 
 ## Contents
 - [Acknowledgments](#acknowledgments)
+- [Citing SAPHERE](#citing-saphere) 
 - [Getting Started](#getting-started)
   - [Running SAPHERE on Windows](#running-saphere-on-windows)
   - [Frequent errors](#frequent-errors)
@@ -13,6 +14,20 @@ This repository contains the code for the experimental analysis within the paper
 
 ## Acknowledgments
 Funded by the German Federal Ministry of Education and Research (BMBF), RefNr. 16KIS1142K
+
+## Citing SAPHERE
+When referencing SAPHERE in academic papers, please cite the original paper that can be found on [IEEE Xplore](https://ieeexplore.ieee.org/document/10223372). Consider using the following BibTeX entry:
+
+```tex
+  @INPROCEEDINGS{SAPHERE,
+    author = {Baumstark, Pia and Monschein, David and Waldhorst, Oliver P.},
+    title = {Secure Plaintext Acquisition of Homomorphically Encrypted Results for Remote Processing}, 
+    booktitle = {IEEE 48th Conference on Local Computer Networks (LCN)},
+    pages = {1-4}
+    year = {2023},
+    address = {Daytona Beach, FL, USA},
+    doi = {10.1109/LCN58197.2023.10223372}}
+```
 
 ## Getting Started
 For easy usage, we recommend the package manager [vcpkg](https://github.com/microsoft/vcpkg) to install the library [SEAL](https://github.com/microsoft/SEAL) as well as the [Visual Studio](https://visualstudio.microsoft.com/de/) IDE.
